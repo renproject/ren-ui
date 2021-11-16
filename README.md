@@ -1,6 +1,5 @@
-
-
-# RenUi
+# ren-ui
+A set of Ren UI components
 
 This project was generated using [Nx](https://nx.dev).
 
