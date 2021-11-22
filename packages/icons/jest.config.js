@@ -1,9 +1,9 @@
 module.exports = {
-  displayName: 'icons',
-  preset: '../../jest.preset.js',
+  displayName: "icons",
+  preset: "../../jest.preset.js",
   transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
+    "^.+\\.[tj]sx?$": "babel-jest",
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/icons',
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
+  coverageDirectory: "../../coverage/packages/icons",
 };
