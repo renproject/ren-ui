@@ -1,6 +1,9 @@
 # icons
 
-This library was generated with [Nx](https://nx.dev).
+Ren SVG icons exported as React Components [Nx](https://nx.dev).
+
+## Storybook
+Run `nx run icons:storybook`.
 
 ## Running unit tests
 
