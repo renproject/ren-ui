@@ -23,4 +23,29 @@ import { ReactComponent as RenUsdt } from "./assets/renUSDT.svg";
 import { ReactComponent as RenWbtc } from "./assets/renWBTC.svg";
 import { ReactComponent as RenZec } from "./assets/renZEC.svg";
 
-export { RenBadger, RenBch, RenBnb, RenBtc, RenBusd, RenComp, RenDai, RenDgb, RenDigi, RenDoge, RenEth, RenEurt, RenFil, RenFtm, RenFtt, RenLink, RenLuna, RenMatic, RenRook, RenSol, RenUni, RenUsdt, RenWbtc, RenZec }
+export {
+  RenBadger,
+  RenBch,
+  RenBnb,
+  RenBtc,
+  RenBusd,
+  RenComp,
+  RenDai,
+  RenDgb,
+  RenDigi,
+  RenDoge,
+  RenEth,
+  RenEurt,
+  RenFil,
+  RenFtm,
+  RenFtt,
+  RenLink,
+  RenLuna,
+  RenMatic,
+  RenRook,
+  RenSol,
+  RenUni,
+  RenUsdt,
+  RenWbtc,
+  RenZec,
+};
