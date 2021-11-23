@@ -1,0 +1,30 @@
+{
+  "root": "packages/fonts",
+  "sourceRoot": "packages/fonts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/fonts",
+        "tsConfig": "packages/fonts/tsconfig.lib.json",
+        "project": "packages/fonts/package.json",
+        "entryFile": "packages/fonts/src/index.ts",
+        "external": ["react/jsx-runtime", "@emotion/styled/base"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          "packages/fonts/src/index.scss",
+          "packages/fonts/src/lib/_suisse.scss",
+          {
+            "glob": "packages/fonts/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "extractCss": true
+      }
+    }
+  }
+}

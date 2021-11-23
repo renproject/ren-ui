@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Book.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntlMono';
+  src: url('/assets/fonts/SuisseIntl/SuisseIntl-Mono.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
