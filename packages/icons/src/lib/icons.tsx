@@ -1,3 +1,4 @@
+import { ReactComponent as Btc } from "./assets/tokens/BTC.svg";
 import { ReactComponent as RenBadger } from "./assets/tokens/renBADGER.svg";
 import { ReactComponent as RenBch } from "./assets/tokens/renBCH.svg";
 import { ReactComponent as RenBnb } from "./assets/tokens/renBNB.svg";
@@ -24,6 +25,7 @@ import { ReactComponent as RenWbtc } from "./assets/tokens/renWBTC.svg";
 import { ReactComponent as RenZec } from "./assets/tokens/renZEC.svg";
 
 export {
+  Btc,
   RenBadger,
   RenBch,
   RenBnb,
