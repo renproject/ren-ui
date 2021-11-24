@@ -69,13 +69,13 @@
         }
       }
     },
-    "copy-hosted-assets": {
+    "copy-assets": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
-          "rm -r dist/hosted/icons | true",
-          "mkdir -p dist/hosted/icons",
-          "cp -r packages/icons/src/lib/assets/* dist/hosted/icons"
+          "rm -r dist/assets/icons | true",
+          "mkdir -p dist/assets/icons",
+          "cp -r packages/icons/src/lib/assets/* dist/assets/icons"
         ]
       }
     }

@@ -25,13 +25,14 @@
         ]
       }
     },
-    "copy-hosted-assets": {
+    "copy-assets": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
-          "rm -r dist/hosted/fonts | true",
-          "mkdir -p dist/hosted/fonts",
-          "cp -r packages/fonts/src/lib/assets/* dist/hosted/fonts"
+          "rm -r dist/assets/fonts | true",
+          "mkdir -p dist/assets/fonts",
+          "sass packages/fonts/src/lib:dist/assets/fonts",
+          "cp -r packages/fonts/src/lib/assets/* dist/assets/fonts"
         ]
       }
     }
