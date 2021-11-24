@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@renproject/fonts": ["packages/fonts/src/index.ts"],
-      "@renproject/icons": ["packages/icons/src/index.ts"]
+      "@renproject/icons": ["packages/icons/src/index.ts"],
+      "@renproject/mui": ["packages/mui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

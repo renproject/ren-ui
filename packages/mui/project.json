@@ -1,0 +1,42 @@
+{
+  "root": "packages/mui",
+  "sourceRoot": "packages/mui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/mui",
+        "tsConfig": "packages/mui/tsconfig.lib.json",
+        "project": "packages/mui/package.json",
+        "entryFile": "packages/mui/src/index.ts",
+        "external": ["react/jsx-runtime", "@emotion/styled/base"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "packages/mui/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/mui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/mui"],
+      "options": {
+        "jestConfig": "packages/mui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

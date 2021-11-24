@@ -3,6 +3,7 @@
   "projects": {
     "fonts": "packages/fonts",
     "icons": "packages/icons",
+    "mui": "packages/mui",
     "playground": "packages/playground",
     "playground-e2e": "packages/playground-e2e"
   }
