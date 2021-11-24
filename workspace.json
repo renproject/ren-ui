@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "fonts": "packages/fonts",
     "icons": "packages/icons",
     "playground": "packages/playground",
     "playground-e2e": "packages/playground-e2e"

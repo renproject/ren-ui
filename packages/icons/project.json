@@ -68,6 +68,16 @@
           "quiet": true
         }
       }
+    },
+    "copy-assets": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -r dist/assets/icons | true",
+          "mkdir -p dist/assets/icons",
+          "cp -r packages/icons/src/lib/assets/* dist/assets/icons"
+        ]
+      }
     }
   }
 }

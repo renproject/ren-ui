@@ -1,0 +1,40 @@
+{
+  "root": "packages/fonts",
+  "sourceRoot": "packages/fonts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/fonts",
+        "tsConfig": "packages/fonts/tsconfig.lib.json",
+        "project": "packages/fonts/package.json",
+        "entryFile": "packages/fonts/src/index.ts",
+        "external": ["react/jsx-runtime", "@emotion/styled/base"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          "packages/fonts/src/lib",
+          "packages/fonts/src/index.scss",
+          {
+            "glob": "packages/fonts/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "copy-assets": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -r dist/assets/fonts | true",
+          "mkdir -p dist/assets/fonts",
+          "sass packages/fonts/src/lib:dist/assets/fonts",
+          "cp -r packages/fonts/src/lib/assets/* dist/assets/fonts"
+        ]
+      }
+    }
+  }
+}
