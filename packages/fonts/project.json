@@ -15,15 +15,24 @@
         "external": ["react/jsx-runtime", "@emotion/styled/base"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "assets": [
+          "packages/fonts/src/lib",
           "packages/fonts/src/index.scss",
-          "packages/fonts/src/lib/_suisse.scss",
           {
             "glob": "packages/fonts/README.md",
             "input": ".",
             "output": "."
           }
-        ],
-        "extractCss": true
+        ]
+      }
+    },
+    "copy-hosted-assets": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -r dist/hosted/fonts | true",
+          "mkdir -p dist/hosted/fonts",
+          "cp -r packages/fonts/src/lib/assets/* dist/hosted/fonts"
+        ]
       }
     }
   }
