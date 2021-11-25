@@ -1,6 +1,12 @@
-import { Button, ButtonProps } from "@mui/material";
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+} from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
+
+const Button = MuiButton;
+type ButtonProps = MuiButtonProps;
 
 export default {
   title: "Components/Button",

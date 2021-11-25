@@ -3,15 +3,19 @@ import { Meta, Story } from "@storybook/react";
 import React from "react";
 import { CircularProgressR } from "./ButtonReExported";
 
+interface Props extends CircularProgressProps {
+  foo: 1;
+}
+
 export default {
   title: "Components/CircularProgress",
   component: CircularProgress,
   args: {
     children: "CircularProgress",
   },
-} as Meta<CircularProgressProps>;
+} as Meta<Props>;
 
-export const Default = (args: CircularProgressProps) => (
+export const Default = ({ foo, ...args }: Props) => (
   <CircularProgress {...args} />
 );
 
