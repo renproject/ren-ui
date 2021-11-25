@@ -1,6 +1,7 @@
 import { CssBaseline } from "@mui/material";
 import { dark } from "@mui/material/styles/createPalette";
 import { backgroundDark, backgroundLight, darkTheme, lightTheme } from "../src";
+import { ThemeProvider as Emotion10ThemeProvider } from "emotion-theming";
 
 import { Theme, ThemeProvider } from "@mui/material/styles";
 
@@ -17,6 +18,7 @@ export const parameters = {
   //   inlineStories: false,
   //   iframeHeight: "700px",
   // },
+  actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     default: "light",
     values: [
@@ -29,6 +31,15 @@ export const parameters = {
         value: backgroundDark,
       },
     ],
+  },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+  docs: {
+    inlineStories: false,
   },
 };
 
@@ -52,10 +63,12 @@ const withThemeProvider = (Story, context) => {
       context?.parameters?.backgrounds?.default
   );
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Story {...context} />
-    </ThemeProvider>
+    <Emotion10ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Story {...context} />
+      </ThemeProvider>
+    </Emotion10ThemeProvider>
   );
 };
 
