@@ -1,8 +1,6 @@
 import { Button, ButtonProps } from "@mui/material";
-import React, { FunctionComponent } from "react";
-
-import { Story, Meta } from "@storybook/react";
-import { TypographyReExported, ButtonExtended } from "./ButtonExtended";
+import { Meta, Story } from "@storybook/react";
+import React from "react";
 import { ButtonReExported } from "./ButtonReExported";
 
 export default {

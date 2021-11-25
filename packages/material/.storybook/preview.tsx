@@ -57,7 +57,6 @@ const resolveThemeByBackgroundValue = (value: string) => {
 };
 
 const withThemeProvider = (Story, context) => {
-  console.log(context);
   const theme = resolveThemeByBackgroundValue(
     context?.globals?.backgrounds?.value ||
       context?.parameters?.backgrounds?.default
