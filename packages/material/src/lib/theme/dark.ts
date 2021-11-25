@@ -1,5 +1,12 @@
 import { createTheme } from "@mui/material/styles";
-import { primaryDark, secondaryDark } from "./colors";
+import {
+  primaryDark,
+  secondaryDark,
+  textPrimaryDark,
+  textPrimaryLight,
+  textSecondaryDark,
+  textSecondaryLight,
+} from "./colors";
 
 export const darkTheme = createTheme({
   palette: {
@@ -9,6 +16,10 @@ export const darkTheme = createTheme({
     },
     secondary: {
       main: secondaryDark,
+    },
+    text: {
+      primary: textPrimaryDark,
+      secondary: textSecondaryDark,
     },
   },
 });

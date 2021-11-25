@@ -1,5 +1,10 @@
 import { createTheme } from "@mui/material/styles";
-import { primaryLight, secondaryLight } from "./colors";
+import {
+  primaryLight,
+  secondaryLight,
+  textPrimaryLight,
+  textSecondaryLight,
+} from "./colors";
 
 export const lightTheme = createTheme({
   palette: {
@@ -9,6 +14,10 @@ export const lightTheme = createTheme({
     },
     secondary: {
       main: secondaryLight,
+    },
+    text: {
+      primary: textPrimaryLight,
+      secondary: textSecondaryLight,
     },
   },
 });
