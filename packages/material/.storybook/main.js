@@ -2,11 +2,10 @@ const rootMain = require("../../../.storybook/main");
 const path = require("path");
 const toPath = (filePath) => path.join(process.cwd(), filePath);
 
+// StorybookConfig
 module.exports = {
   ...rootMain,
-
   core: { ...rootMain.core, builder: "webpack5" },
-
   stories: [
     ...rootMain.stories,
     "../src/lib/**/*.stories.mdx",
@@ -19,27 +18,36 @@ module.exports = {
       config = await rootMain.webpackFinal(config, { configType });
     }
 
+    return config;
     // add your own webpack tweaks if needed
-
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          "@emotion/core": toPath("node_modules/@emotion/react"),
-          "emotion-theming": toPath("node_modules/@emotion/react"),
-        },
-      },
-    };
+    // return {
+    //   ...config,
+    //   resolve: {
+    //     ...config.resolve,
+    //     alias: {
+    //       ...config.resolve.alias,
+    //       "@emotion/core": toPath("node_modules/@emotion/react"),
+    //       "emotion-theming": toPath("node_modules/@emotion/react"),
+    //     },
+    //   },
+    // };
   },
-  // typescript: {
-  //   reactDocgen: "react-docgen-typescript",
-  //   reactDocgenTypescriptOptions: {
-  //     compilerOptions: {
-  //       allowSyntheticDefaultImports: false,
-  //       esModuleInterop: false,
-  //     },
-  //   },
-  // },
+  // logLevel: "debug",
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      // shouldExtractLiteralValuesFromEnum: true,
+      // shouldRemoveUndefinedFromOptional: true,
+      // savePropValueAsString: true,
+      propFilter: (prop) => {
+        // console.log(prop.name, prop);
+        return prop.parent
+          ? /@material-ui/.test(prop.parent.fileName) ||
+              !/node_modules/.test(prop.parent.fileName)
+          : true;
+      },
+    },
+  },
 };

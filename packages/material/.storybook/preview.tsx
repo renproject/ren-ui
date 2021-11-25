@@ -1,23 +1,10 @@
 import { CssBaseline } from "@mui/material";
-import { dark } from "@mui/material/styles/createPalette";
 import { backgroundDark, backgroundLight, darkTheme, lightTheme } from "../src";
 import { ThemeProvider as Emotion10ThemeProvider } from "emotion-theming";
 
-import { Theme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 
 export const parameters = {
-  // actions: { argTypesRegex: "^on[A-Z].*" },
-  // layout: "centered",
-  // controls: {
-  //   matchers: {
-  //     color: /(background|color)$/i,
-  //     date: /Date$/,
-  //   },
-  // },
-  // docs: {
-  //   inlineStories: false,
-  //   iframeHeight: "700px",
-  // },
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     default: "light",
@@ -33,10 +20,11 @@ export const parameters = {
     ],
   },
   controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+    // matchers: {
+    //   color: /(background|color)$/i,
+    //   date: /Date$/,
+    // },
+    expanded: true,
   },
   docs: {
     inlineStories: false,

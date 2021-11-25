@@ -1,4 +1,4 @@
-import { Paper } from "@mui/material";
+import { Paper, TypographyProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -7,7 +7,14 @@ import Typography from "@mui/material/Typography";
 export default {
   title: "Components/Typography",
   component: Typography,
-} as Meta;
+  args: {
+    children: "Text",
+  },
+} as Meta<TypographyProps>;
+
+export const Default: Story<TypographyProps> = ({ ...args }) => (
+  <Typography {...args} />
+);
 
 export const AllVariants: Story = () => {
   return (
