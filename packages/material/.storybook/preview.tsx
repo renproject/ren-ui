@@ -5,6 +5,18 @@ import { backgroundDark, backgroundLight, darkTheme, lightTheme } from "../src";
 import { Theme, ThemeProvider } from "@mui/material/styles";
 
 export const parameters = {
+  // actions: { argTypesRegex: "^on[A-Z].*" },
+  // layout: "centered",
+  // controls: {
+  //   matchers: {
+  //     color: /(background|color)$/i,
+  //     date: /Date$/,
+  //   },
+  // },
+  // docs: {
+  //   inlineStories: false,
+  //   iframeHeight: "700px",
+  // },
   backgrounds: {
     default: "light",
     values: [
