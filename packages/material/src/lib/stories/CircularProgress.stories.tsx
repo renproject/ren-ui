@@ -1,11 +1,7 @@
 import { CircularProgress, CircularProgressProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { CircularProgressR } from "./ButtonReExported";
-
-interface Props extends CircularProgressProps {
-  foo: 1;
-}
+import "./All";
 
 export default {
   title: "Components/CircularProgress",
@@ -13,9 +9,9 @@ export default {
   args: {
     children: "CircularProgress",
   },
-} as Meta<Props>;
+} as Meta;
 
-export const Default = ({ foo, ...args }: Props) => (
+export const Default: Story<CircularProgressProps> = (args) => (
   <CircularProgress {...args} />
 );
 

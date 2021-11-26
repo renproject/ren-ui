@@ -1,12 +1,7 @@
-import {
-  Button as MuiButton,
-  ButtonProps as MuiButtonProps,
-} from "@mui/material";
+import { Button, ButtonProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-
-const Button = MuiButton;
-type ButtonProps = MuiButtonProps;
+import "./All";
 
 export default {
   title: "Components/Button",
@@ -14,9 +9,9 @@ export default {
   args: {
     children: "Button",
   },
-} as Meta<ButtonProps>;
+} as Meta;
 
-export const Default = (args: ButtonProps) => <Button {...args} />;
+export const Default: Story<ButtonProps> = (args) => <Button {...args} />;
 
 // export const Primary: Story<ButtonProps> = Default.bind({});
 // Primary.args = {

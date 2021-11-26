@@ -41,13 +41,13 @@ module.exports = {
       // shouldExtractLiteralValuesFromEnum: true,
       // shouldRemoveUndefinedFromOptional: true,
       // savePropValueAsString: true,
-      propFilter: (prop) => {
-        // console.log(prop.name, prop);
-        return prop.parent
-          ? /@material-ui/.test(prop.parent.fileName) ||
-              !/node_modules/.test(prop.parent.fileName)
-          : true;
-      },
+      // propFilter: (prop) => {
+      //   // console.log(prop.name, prop);
+      //   return prop.parent
+      //     ? /@material-ui/.test(prop.parent.fileName) ||
+      //         !/node_modules/.test(prop.parent.fileName)
+      //     : true;
+      // },
     },
   },
 };
