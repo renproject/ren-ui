@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@mui/material";
 import { FunctionComponent } from "react";
-import { darkTheme } from "./dark";
-import { lightTheme } from "./light";
+import { darkTheme, lightTheme } from "./themes";
 
 export const LightThemeProvider: FunctionComponent = (props) => (
   <ThemeProvider theme={lightTheme} {...props} />

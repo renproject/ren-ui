@@ -1,7 +1,6 @@
 import { Box, Typography, TypographyProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import * as React from "react";
-import "./All";
 
 export default {
   title: "Components/Typography",

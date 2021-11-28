@@ -1,7 +1,6 @@
 import { Rating, RatingProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-import "./All";
 
 export default {
   title: "Components/Rating",
