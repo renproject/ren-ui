@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react";
 import * as Icons from "./icons";
 
 export default {
-  title: "Ren Token Icons",
+  title: "Token Icons",
   argTypes: {
     width: {
       control: { type: "range", min: 4, max: 256, step: 1 },
@@ -25,8 +25,8 @@ const AllIconsStory: Story<any> = ({ data, ...args }) => {
   );
 };
 
-export const AllTokenIcons = AllIconsStory.bind({});
-AllTokenIcons.args = {
+export const All = AllIconsStory.bind({});
+All.args = {
   width: 64,
   data: Object.entries(Icons),
 };
