@@ -5,7 +5,12 @@ const components = {
   MuiButtonBase: {
     defaultProps: {
       disableRipple: true,
+    },
+  },
+  MuiButton: {
+    defaultProps: {
       disableElevation: true,
+      disableFocusRipple: true,
     },
   },
 };

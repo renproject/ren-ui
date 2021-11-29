@@ -1,11 +1,25 @@
 import { Button, ButtonProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-// import "./All";
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+} from "@storybook/addon-docs";
+import { createExternalDoc } from "./storybookHelpers/ExternalDoc";
 
 export default {
   title: "Components/Button",
   component: Button,
+  parameters: {
+    docs: {
+      page: createExternalDoc("https://example.com"),
+    },
+  },
   args: {
     children: "Button",
     color: "primary",

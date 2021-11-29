@@ -1,4 +1,5 @@
 import { CssBaseline } from "@mui/material";
+import { forceReRender } from "@storybook/react";
 
 import { ThemeProvider as Emotion10ThemeProvider } from "emotion-theming";
 
@@ -51,40 +52,35 @@ const resolveThemeByContextValue = (
   }
 };
 
-let rerender = 0;
-const useThemeProvider = (Story, context) => {
-  const [state, setState] = useState(0);
-
+// const rerender = 0;
+const WithThemeProvider = (Story, context) => {
   const [theme, setTheme] = useState(
     resolveThemeByContextValue(context, { lightTheme, darkTheme })
   );
   console.log("Theme Rerender");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      console.log(rerender);
-      setState(rerender);
-
-      import("../src/lib/theme/themes").then(({ darkTheme, lightTheme }) => {
-        console.log(darkTheme.palette.primary.main, lightTheme);
-        const resolvedTheme = resolveThemeByContextValue(context, {
-          lightTheme,
-          darkTheme,
+    if (process.env.NODE_ENV === "development") {
+      const interval = setInterval(() => {
+        import("../src/lib/theme/themes").then(({ darkTheme, lightTheme }) => {
+          const resolvedTheme = resolveThemeByContextValue(context, {
+            lightTheme,
+            darkTheme,
+          });
+          if (theme !== resolvedTheme) {
+            console.info("updating theme", resolvedTheme.type);
+            setTheme(resolvedTheme);
+          }
         });
-        console.info("updating theme");
-        setTheme(resolvedTheme);
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [context?.globals?.backgrounds?.value]);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [theme, context?.globals?.backgrounds?.value]);
 
   return (
     <Emotion10ThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <span>
-          {state} {rerender}
-        </span>
         <Story {...context} />
       </ThemeProvider>
     </Emotion10ThemeProvider>
@@ -93,28 +89,9 @@ const useThemeProvider = (Story, context) => {
 
 if (module["hot"]) {
   module["hot"].accept();
-  module["hot"].dispose((data) => {
-    rerender++;
-    console.log(data);
+  module["hot"].dispose(() => {
+    return;
   });
 }
 
-/*
-Ignored an update to unaccepted module ./packages/material/src/lib/theme/palettes.ts -> ./packages/material/src/lib/theme/themes.ts -> ./packages/material/src/lib/theme.tsx -> ./packages/material/src/index.ts -> ./packages/material/.storybook/preview.tsx -> ./packages/material/.storybook/preview.tsx-generated-config-entry.js
- */
-
-// let hmr = false;
-// if (module["hot"] && !hmr) {
-//   hmr = true;
-//   // module["hot"].accept();
-//   module["hot"].accept(["../src"], (deps) => {
-//     const conf = import("../src/lib/theme/themes").then(
-//       ({ darkTheme, lightTheme }) => {
-//         console.log(darkTheme.palette.primary.main, lightTheme);
-//       }
-//     );
-//     console.log("*", deps, conf);
-//   });
-// }
-
-export const decorators = [useThemeProvider];
+export const decorators = [WithThemeProvider];

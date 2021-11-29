@@ -10,13 +10,10 @@ import {
   textSecondaryLight,
 } from "./colors";
 
-const color = primaryDark;
-// const color = secondaryDark;
-
 export const lightPalette = createPalette({
   mode: "light",
   primary: {
-    main: color,
+    main: primaryLight,
   },
   secondary: {
     main: secondaryLight,
@@ -30,7 +27,7 @@ export const lightPalette = createPalette({
 export const darkPalette = createPalette({
   mode: "dark",
   primary: {
-    main: secondaryDark,
+    main: primaryDark,
   },
   secondary: {
     main: secondaryDark,
