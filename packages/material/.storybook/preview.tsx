@@ -57,7 +57,10 @@ const WithThemeProvider = (Story, context) => {
   const [theme, setTheme] = useState(
     resolveThemeByContextValue(context, { lightTheme, darkTheme })
   );
-  console.log("Theme Rerender");
+
+  useEffect(() => {
+    setTheme(resolveThemeByContextValue(context, { lightTheme, darkTheme }));
+  }, [context?.globals?.backgrounds?.value]);
 
   useEffect(() => {
     if (process.env.NODE_ENV === "development") {
@@ -68,7 +71,7 @@ const WithThemeProvider = (Story, context) => {
             darkTheme,
           });
           if (theme !== resolvedTheme) {
-            console.info("updating theme", resolvedTheme.type);
+            console.info("Updating Theme:", resolvedTheme.type);
             setTheme(resolvedTheme);
           }
         });
