@@ -3,6 +3,7 @@
   "projects": {
     "fonts": "packages/fonts",
     "icons": "packages/icons",
+    "material": "packages/material",
     "playground": "packages/playground",
     "playground-e2e": "packages/playground-e2e"
   }
