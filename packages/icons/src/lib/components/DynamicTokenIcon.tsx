@@ -2,7 +2,15 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FunctionComponent, ReactNode } from "react";
 
-export type ChainType = "none" | "ethereum" | "binance";
+export type ChainType =
+  | "None"
+  | "Ethereum"
+  | "Solana"
+  | "Fantom"
+  | "BinanceSmartChain"
+  | "Avalanche"
+  | "PolkaDot"
+  | "Arbitrum";
 
 export type DynamicTokenIconProps = {
   Icon?: ReactNode;
@@ -10,31 +18,79 @@ export type DynamicTokenIconProps = {
   size?: number;
 };
 
-const defaultColor = `#B3BDC7`;
-
-const chainMappings: Record<ChainType, string[]> = {
-  none: [defaultColor],
-  ethereum: [
-    "#627eea",
-    "#627eea",
-    "#627eea",
-    "#627eea",
-    "#627eea",
-    "",
-    "",
-    "#627eea",
-  ],
-  binance: ["#F3BA2F"],
+const create521Colors = (primary: string, secondary = "") => {
+  return [
+    primary,
+    primary,
+    primary,
+    primary,
+    primary,
+    secondary,
+    secondary,
+    primary,
+  ];
 };
 
-const pathStyles = ({ chain = "none" }: DynamicTokenIconProps) => {
+const create125Colors = (primary: string, secondary = "") => {
+  return create521Colors(primary, secondary).reverse();
+};
+
+const defaultColor = `#B3BDC7`;
+const ethereumColor = "#627eea";
+const ethereumColorArray = create521Colors(ethereumColor, "");
+
+const fantomColor = "#1969ff";
+const fantomColors = create125Colors(fantomColor, "");
+const binanceColor = "#F3BA2F";
+const arbitrumColors = ["#28a0f0", "#2d374b"];
+const avalancheColor = "#e84142";
+const avalancheColors = create521Colors(avalancheColor);
+const solanaColors = [
+  "#ca32f8",
+  "#ca32f8",
+  "#ca32f8",
+  "#c439f6",
+  "#af4eec",
+  "#9469e1",
+  "#7788d5",
+  "#58a6c8",
+  "#1de2af",
+  "#1de2af",
+  "#1de2af",
+  "#2bd3b5",
+  "#44bbbf",
+  "#5ea0cb",
+  "#7c81d7",
+  "#9a63e3",
+];
+const polkaColorPrimary = "#313131";
+const polkaColorSecondary = "#e6007a";
+const polkaColors = create521Colors(polkaColorPrimary, polkaColorSecondary);
+
+const chainMappings: Record<ChainType, string[]> = {
+  Avalanche: avalancheColors,
+  Arbitrum: arbitrumColors,
+  Ethereum: ethereumColorArray,
+  Solana: solanaColors,
+  Fantom: fantomColors,
+  None: [defaultColor],
+  BinanceSmartChain: [binanceColor],
+  PolkaDot: polkaColors,
+};
+
+const pathStyles = ({ chain = "None" }: DynamicTokenIconProps) => {
   const mapping = chainMappings[chain]
     ? chainMappings[chain]
-    : chainMappings["none"];
-  console.log(mapping);
+    : chainMappings["None"];
   const colorArray = Array.from({ length: 16 }, (_, index) => {
     if (mapping.length === 1) {
       return mapping[0];
+    } else if (mapping.length === 2) {
+      if (index < 8) {
+        return mapping[0];
+      } else {
+        return mapping[1];
+      }
     } else if (mapping.length === 8) {
       if (index < 8) {
         return mapping[index];
@@ -45,19 +101,17 @@ const pathStyles = ({ chain = "none" }: DynamicTokenIconProps) => {
       return mapping[index];
     } else {
       console.warn(
-        "Provide 1, 8 or 16 color params for chain:",
+        "DynamicTokenIcon: Provide 1, 2, 8 or 16 color params for chain:",
         chain,
-        "Provided:",
+        "provided:",
         mapping.length
       );
       return defaultColor;
     }
   });
-  const styles = css`
+  return css`
     ${colorArray.map((color, index) => `.d${++index} { fill: ${color};}`)}
   `;
-  console.log(styles.styles);
-  return styles;
 };
 
 const sizeStyles = ({ size }: DynamicTokenIconProps) => {

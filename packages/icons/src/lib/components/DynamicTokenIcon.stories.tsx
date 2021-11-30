@@ -21,9 +21,9 @@ export const Default: Story<DynamicTokenIconProps> = (args) => (
 );
 
 export const ToggleChain: Story = () => {
-  const [chain, setChain] = useState<ChainType>("none");
+  const [chain, setChain] = useState<ChainType>("None");
   const toggleChain = useCallback(() => {
-    setChain(chain === "none" ? "ethereum" : "none");
+    setChain(chain === "None" ? "Ethereum" : "None");
   }, [chain]);
   return (
     <div>
