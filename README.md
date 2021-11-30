@@ -2,7 +2,8 @@
 
 A set of Ren UI components.
 Consists of:
-* [@repnroject/fonts](./packages/fonts/) - Fonts package
+* [@renproject/fonts](./packages/fonts/) - Fonts package
+* [@renproject/icons](./packages/icons/) - Icons and reusable graphic  components package (react)
 * [@renproject/material](./packages/material/) - React [Material UI](https://mui.com/) v5 themes and customized components.
 
 ## Building
