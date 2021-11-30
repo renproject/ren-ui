@@ -1,4 +1,4 @@
-# @renproject/fonts`
+# Ren UI Fonts`
 
 Ren Fonts package.
 
@@ -12,16 +12,19 @@ Install the package:
 yarn add @renproject/fonts
 ```
 
+### CSS
+
+This will import css with all font faces
+```js
+import "@renproject/fonts"
+```
+
+
+
 ### Sass
+
 Include this at the top of your Sass index file:
 
 ```scss
 @import "~@renproject/fonts/index.scss";
 ```
-
-###CSS 
-
-```js
-import "@renproject/fonts/lib/index-absolute.css"
-```
-

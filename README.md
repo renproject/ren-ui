@@ -1,15 +1,22 @@
-# ren-ui
+# Ren UI
 
-A set of Ren UI components
+A set of Ren UI components.
+Consists of:
+* [@repnroject/fonts](./packages/fonts/) - Fonts package
+* [@renproject/material](./packages/material/) - React [Material UI](https://mui.com/) v5 themes and customized components.
 
+## Building
+
+Build all storybooks: `nx run-many --target build-storybook --all`  
+Build all packages: `nx run-many --target build --all`
+
+## Tooling
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Smart, Extensible Build Framework**
 
-## Building
-Build all storybooks: `nx run-many --target build-storybook --all`
 ## Understand your workspace
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
