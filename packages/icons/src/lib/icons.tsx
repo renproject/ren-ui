@@ -23,9 +23,19 @@ import { ReactComponent as RenUni } from "./assets/tokens/renUNI.svg";
 import { ReactComponent as RenUsdt } from "./assets/tokens/renUSDT.svg";
 import { ReactComponent as RenWbtc } from "./assets/tokens/renWBTC.svg";
 import { ReactComponent as RenZec } from "./assets/tokens/renZEC.svg";
+import { ReactComponent as Usdt } from "./assets/tokens/USDT.svg";
+import { ReactComponent as Usdc } from "./assets/tokens/USDC.svg";
+import { ReactComponent as Busd } from "./assets/tokens/BUSD.svg";
+import { ReactComponent as Eurt } from "./assets/tokens/EURT.svg";
+import { ReactComponent as Dai } from "./assets/tokens/DAI.svg";
 
 export {
   Btc,
+  Usdt,
+  Usdc,
+  Busd,
+  Eurt,
+  Dai,
   RenBadger,
   RenBch,
   RenBnb,
