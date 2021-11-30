@@ -1,6 +1,11 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { FunctionComponent, ReactNode } from "react";
+import {
+  FunctionComponent,
+  ReactComponentElement,
+  ReactNode,
+  SVGProps,
+} from "react";
 
 export type ChainType =
   | "None"
@@ -13,7 +18,7 @@ export type ChainType =
   | "Arbitrum";
 
 export type DynamicTokenIconProps = {
-  Icon?: ReactNode;
+  Icon?: FunctionComponent<SVGProps<any>>;
   chain?: ChainType;
   size?: number;
 };
@@ -235,6 +240,7 @@ const LongRays = () => (
 export const DynamicTokenIcon: FunctionComponent<DynamicTokenIconProps> = ({
   chain,
   size = 64,
+  Icon,
 }) => {
   return (
     <Wrapper chain={chain} size={size}>
@@ -247,6 +253,7 @@ export const DynamicTokenIcon: FunctionComponent<DynamicTokenIconProps> = ({
       >
         <Paths />
         <LongRays />
+        {Icon && <Icon x="28" y="28" width="200" height="200" />}
       </svg>
     </Wrapper>
   );
