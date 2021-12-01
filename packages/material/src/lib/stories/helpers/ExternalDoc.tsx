@@ -15,14 +15,13 @@ type ExternalDocProps = {
 
 export const ExternalDoc: FunctionComponent<ExternalDocProps> = ({
   url,
-  ...rest
+  children,
 }) => {
-  console.log(rest);
   return (
     <>
       <Title />
       <a href={url} target="_blank" rel="noreferrer">
-        Documentation
+        {children ? children : "Documentation"}
       </a>
       {/*<Subtitle />*/}
       {/*<Description />*/}
@@ -35,4 +34,8 @@ export const ExternalDoc: FunctionComponent<ExternalDocProps> = ({
 
 export const createExternalDoc = (url: string) => {
   return () => <ExternalDoc url={url} />;
+};
+
+export const createExternalMuiComponentDoc = (name: string) => {
+  return () => <ExternalDoc url={`https://mui.com/api/${name}`} />;
 };

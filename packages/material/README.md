@@ -1,4 +1,4 @@
-# Ren Material
+# Ren UI Material
 Ren @mui/material themes
 
 This library was generated with [Nx](https://nx.dev).

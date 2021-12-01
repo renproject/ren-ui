@@ -87,9 +87,14 @@ const typography: ThemeOptions["typography"] = {
   },
 };
 
+const shape: ThemeOptions["shape"] = {
+  borderRadius: 0,
+};
+
 const shared = {
   components,
   typography,
+  shape,
 };
 
 export const lightTheme = createTheme({

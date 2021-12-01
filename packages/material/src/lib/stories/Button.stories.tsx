@@ -1,14 +1,14 @@
 import { Box, Button, ButtonProps } from "@mui/material";
 import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { createExternalDoc } from "./helpers/ExternalDoc";
+import { createExternalMuiComponentDoc } from "./helpers/ExternalDoc";
 
 export default {
   title: "Components/Button",
   component: Button,
   parameters: {
     docs: {
-      page: createExternalDoc("https://example.com"),
+      page: createExternalMuiComponentDoc("button"),
     },
     controls: { hideNoControlsWarning: true },
   },
