@@ -1,7 +1,7 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeOptions } from "@mui/material/styles";
 import { darkPalette, lightPalette } from "./palettes";
 
-const components = {
+const components: ThemeOptions["components"] = {
   MuiButtonBase: {
     defaultProps: {
       disableRipple: true,
@@ -15,12 +15,21 @@ const components = {
   },
 };
 
+const typography: ThemeOptions["typography"] = {
+  fontFamily: `"SuisseIntl", "Roboto","Helvetica","Arial",sans-serif;`,
+};
+
+const shared = {
+  components,
+  typography,
+};
+
 export const lightTheme = createTheme({
   palette: lightPalette,
-  components,
+  ...shared,
 });
 
 export const darkTheme = createTheme({
   palette: darkPalette,
-  components,
+  ...shared,
 });

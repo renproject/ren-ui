@@ -12,13 +12,17 @@ Install the package:
 yarn add @renproject/fonts
 ```
 
-### CSS
+### JS
 
-This will import css with all font faces
+This will import sass/css with all font faces:
 ```js
-import "@renproject/fonts"
+import "@renproject/fonts/index.scss"
 ```
+or
 
+```js
+import "@renproject/fonts/lib/fonts.esm.css"
+```
 
 
 ### Sass

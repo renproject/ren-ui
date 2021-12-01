@@ -8,6 +8,7 @@
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
     "@mui/material": "^5.2.0",
+    "@renproject/fonts": "^2.0.0-alpha.1",
     "@renproject/icons": "^0.0.1-alpha.0",
     "core-js": "^3.6.5",
     "dirlist-static": "^1.2.1",

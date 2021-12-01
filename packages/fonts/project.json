@@ -14,7 +14,6 @@
         "entryFile": "packages/fonts/src/index.ts",
         "external": ["react/jsx-runtime", "@emotion/styled/base"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-        "format": ["esm"],
         "assets": [
           "packages/fonts/src/lib/assets/SuisseIntl",
           "packages/fonts/src/lib/_suisse.scss",
