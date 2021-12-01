@@ -2192,11 +2192,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@renproject/fonts@^2.0.0-alpha.1":
-  version "2.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@renproject/fonts/-/fonts-2.0.0-alpha.1.tgz#d5ab09d7f449a170816df3064d1a4e7d47188b2f"
-  integrity sha512-Su2s7PTKXvh2sKTmbNpc2ry7AWuVIn1hkEMrl5BtaSfGc3e65ZDkQ4V6PBraxF6+2XdfbnBHMkG4tZ0VuXsYFg==
-
 "@renproject/icons@^0.0.1-alpha.0":
   version "0.0.1-alpha.0"
   resolved "https://registry.yarnpkg.com/@renproject/icons/-/icons-0.0.1-alpha.0.tgz#499de27a24f720fc7d5287b54a5745f03cac8740"
