@@ -1,5 +1,5 @@
 import { CssBaseline } from "@mui/material";
-import "@renproject/fonts/index.scss";
+import "../../fonts/src/index.scss";
 
 import { ThemeProvider as Emotion10ThemeProvider } from "emotion-theming";
 

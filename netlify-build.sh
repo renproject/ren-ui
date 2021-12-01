@@ -8,7 +8,8 @@ rm -r dist/packages | true &&
 mkdir -p dist/assets &&
 touch dist/assets/index.html &&
 cd dist/assets &&
-dirlist-static --filter "\.(?!otf$)" > index.html &&
+# filter out fonts
+dirlist-static --filter "\.(?!woff2)" > index.html &&
 # build main index.html
 cd ../
 touch index.html
