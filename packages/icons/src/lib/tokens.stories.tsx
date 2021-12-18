@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import { IconDescription, IconWrapper } from "../../.storybook/Helpers";
-import * as Icons from "./icons";
+import * as Icons from "./tokens";
 
 export default {
   title: "Token Icons",
