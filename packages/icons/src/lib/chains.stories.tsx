@@ -3,7 +3,7 @@ import { AllIconsTemplate, iconSizeControl } from "../../.storybook/Helpers";
 import * as Icons from "./chains";
 
 export default {
-  title: "Chain Icons",
+  title: "Icons/Chain Icons",
   argTypes: {
     size: iconSizeControl,
     data: {

@@ -24,10 +24,10 @@ import { ReactComponent as RenRook } from "../assets/tokens/wrapped/renROOK.svg"
 import { ReactComponent as RenSol } from "../assets/tokens/wrapped/renSOL.svg";
 import { ReactComponent as RenSushi } from "../assets/tokens/wrapped/renSUSHI.svg";
 import { ReactComponent as RenUni } from "../assets/tokens/wrapped/renUNI.svg";
-import { ReactComponent as RenUsdt } from "../assets/tokens/wrapped/renUSDT.svg";
 import { ReactComponent as RenUsdc } from "../assets/tokens/wrapped/renUSDC.svg";
+import { ReactComponent as RenUsdt } from "../assets/tokens/wrapped/renUSDT.svg";
 import { ReactComponent as RenWbtc } from "../assets/tokens/wrapped/renWBTC.svg";
-import { ReactComponent as RenWeth } from "../assets/tokens/wrapped/renWETH.svg";
+// import { ReactComponent as RenWeth } from "../assets/tokens/wrapped/renWETH.svg";
 import { ReactComponent as RenZec } from "../assets/tokens/wrapped/renZEC.svg";
 
 export {
@@ -46,8 +46,8 @@ export {
   RenEurt,
   RenFil,
   RenFtm,
-  RenKnc,
   RenFtt,
+  RenKnc,
   RenLink,
   RenLuna,
   RenMatic,
@@ -60,6 +60,6 @@ export {
   RenUsdt,
   RenUsdc,
   RenWbtc,
-  RenWeth,
+  // RenWeth,
   RenZec,
 };

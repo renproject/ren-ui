@@ -1,13 +1,11 @@
-import { Story, Meta } from "@storybook/react";
-import { IconDescription, IconWrapper } from "../../.storybook/Helpers";
+import { Meta } from "@storybook/react";
+import { AllIconsTemplate, iconSizeControl } from "../../.storybook/Helpers";
 import * as Icons from "./wallets";
 
 export default {
-  title: "Wallet Icons",
+  title: "Icons/Wallet Icons",
   argTypes: {
-    size: {
-      control: { type: "range", min: 4, max: 256, step: 1 },
-    },
+    size: iconSizeControl,
     data: {
       table: {
         disable: true,
@@ -16,21 +14,7 @@ export default {
   },
 } as Meta;
 
-const AllIconsStory: Story<any> = ({ data, ...args }) => {
-  const { size, ...props } = args;
-  return (
-    <div>
-      {data.map(([name, Icon]: [string, any]) => (
-        <IconWrapper key={name}>
-          <Icon title={name} width={size} height={size} {...props} />
-          <IconDescription>{name}</IconDescription>
-        </IconWrapper>
-      ))}
-    </div>
-  );
-};
-
-export const All = AllIconsStory.bind({});
+export const All = AllIconsTemplate.bind({});
 All.args = {
   size: 64,
   data: Object.entries(Icons),
