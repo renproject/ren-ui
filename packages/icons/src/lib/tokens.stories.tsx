@@ -1,6 +1,7 @@
-import { Story, Meta } from "@storybook/react";
-import { IconDescription, IconWrapper } from "../../.storybook/Helpers";
-import * as Icons from "./tokens";
+import { Meta } from "@storybook/react";
+import { AllIconsTemplate } from "../../.storybook/Helpers";
+// import * as WrappedIcons from "./tokens/wrapped";
+import * as NativeIcons from "./tokens/native";
 
 export default {
   title: "Token Icons",
@@ -16,38 +17,28 @@ export default {
   },
 } as Meta;
 
-const AllIconsStory: Story<any> = ({ data, ...args }) => {
-  const { size, ...props } = args;
-  return (
-    <div>
-      <div>
-        {data
-          .filter(([name]: [string]) => !name.startsWith("Ren"))
-          .map(([name, Icon]: [string, any]) => (
-            <IconWrapper key={name}>
-              <Icon title={name} width={size} height={size} {...props} />
-              <IconDescription>{name}</IconDescription>
-            </IconWrapper>
-          ))}
-      </div>
-      <div>
-        {data
-          .filter(([name]: [string]) => name.startsWith("Ren"))
-          .map(([name, Icon]: [string, any]) => (
-            <IconWrapper key={name}>
-              <Icon title={name} width={size} height={size} {...props} />
-              <IconDescription>{name}</IconDescription>
-            </IconWrapper>
-          ))}
-      </div>
-    </div>
-  );
-};
+// const AllIconsStory: Story<any> = ({ data, ...args }) => {
+//   const { size, ...props } = args;
+//   return (
+//     <div>
+//       {data.map(([name, Icon]: [string, any]) => (
+//         <IconWrapper key={name}>
+//           <Icon title={name} width={size} height={size} {...props} />
+//           <IconDescription>{name}</IconDescription>
+//         </IconWrapper>
+//       ))}
+//     </div>
+//   );
+// };
 
-export const All = AllIconsStory.bind({});
-All.args = {
+// export const Wrapped = AllIconsTemplate.bind({});
+// Wrapped.args = {
+//   size: 64,
+//   data: Object.entries(WrappedIcons),
+// };
+
+export const Native = AllIconsTemplate.bind({});
+Native.args = {
   size: 64,
-  // width: 64,
-  // height: 64,
-  data: Object.entries(Icons),
+  data: Object.entries(NativeIcons),
 };
