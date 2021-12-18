@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 import { Story, Meta } from "@storybook/react";
+import { IconDescription, IconWrapper } from "../../.storybook/Helpers";
 import * as Icons from "./icons";
 
 export default {
   title: "Token Icons",
   argTypes: {
-    width: {
+    size: {
       control: { type: "range", min: 4, max: 256, step: 1 },
     },
     data: {
@@ -16,35 +17,38 @@ export default {
   },
 } as Meta;
 
-const Wrapper = styled("div")`
-  margin: 8px;
-  display: inline-flex;
-  flex-direction: column;
-  > svg {
-    margin: 8px;
-  }
-`;
-
-const Description = styled("div")`
-  text-align: center;
-`;
-
 const AllIconsStory: Story<any> = ({ data, ...args }) => {
+  const { size, ...props } = args;
   return (
     <div>
-      {data.map(([name, Icon]: [string, any]) => (
-        <Wrapper>
-          <Icon key={name} title={name} {...args} />
-          <Description>{name}</Description>
-        </Wrapper>
-      ))}
+      <div>
+        {data
+          .filter(([name]: [string]) => !name.startsWith("Ren"))
+          .map(([name, Icon]: [string, any]) => (
+            <IconWrapper key={name}>
+              <Icon title={name} width={size} height={size} {...props} />
+              <IconDescription>{name}</IconDescription>
+            </IconWrapper>
+          ))}
+      </div>
+      <div>
+        {data
+          .filter(([name]: [string]) => name.startsWith("Ren"))
+          .map(([name, Icon]: [string, any]) => (
+            <IconWrapper key={name}>
+              <Icon title={name} width={size} height={size} {...props} />
+              <IconDescription>{name}</IconDescription>
+            </IconWrapper>
+          ))}
+      </div>
     </div>
   );
 };
 
 export const All = AllIconsStory.bind({});
 All.args = {
-  width: 64,
-  height: 64,
+  size: 64,
+  // width: 64,
+  // height: 64,
   data: Object.entries(Icons),
 };
