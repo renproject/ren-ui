@@ -7,6 +7,8 @@ import {
   SVGProps,
 } from "react";
 
+//TODO: use @renproject/chains
+
 export type ChainType =
   | "None"
   | "Ethereum"
