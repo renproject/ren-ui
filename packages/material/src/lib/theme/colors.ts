@@ -1,4 +1,4 @@
-import { blue, grey, orange } from "@mui/material/colors";
+import { grey, orange } from "@mui/material/colors";
 
 const renLightGrey = "#d6dce1";
 const renMidGrey = "#4B555E";
