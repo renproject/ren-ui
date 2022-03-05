@@ -1,7 +1,12 @@
 {
   "name": "@renproject/icons",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.3",
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^17",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11"
   }
 }
