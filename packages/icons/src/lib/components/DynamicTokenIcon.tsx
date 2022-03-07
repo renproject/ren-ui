@@ -1,11 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import {
-  FunctionComponent,
-  ReactComponentElement,
-  ReactNode,
-  SVGProps,
-} from "react";
+import { FunctionComponent, SVGProps } from "react";
 
 //TODO: use @renproject/chains
 
