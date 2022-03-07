@@ -4,7 +4,7 @@ Ren SVG icons exported as React Components.
 
 ## Build and publish
 Run `nx run icons:build`. Then 
-`cd dist/packages/icons`, `npm publish`
+`cd dist/packages/icons`, `yarn publish`
 
 ## Storybook
 Run as dev server: `nx run icons:storybook`.
