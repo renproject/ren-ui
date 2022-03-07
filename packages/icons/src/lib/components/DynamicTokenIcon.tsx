@@ -1,18 +1,23 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { Chain } from "@renproject/chains";
 import { FunctionComponent, SVGProps } from "react";
+import { chainColors } from "./chainColors";
 
-//TODO: use @renproject/chains
+type PickKey<T, K extends keyof T> = Extract<keyof T, K>;
 
-export type ChainType =
-  | "None"
+type SupportedChains = PickKey<
+  typeof Chain,
   | "Ethereum"
-  | "Solana"
-  | "Fantom"
   | "BinanceSmartChain"
+  | "Fantom"
+  | "Polygon"
   | "Avalanche"
-  | "PolkaDot"
-  | "Arbitrum";
+  | "Solana"
+  | "Arbitrum"
+>;
+
+export type ChainType = SupportedChains | "None";
 
 export type DynamicTokenIconProps = {
   Icon?: FunctionComponent<SVGProps<any>>;
@@ -20,70 +25,12 @@ export type DynamicTokenIconProps = {
   size?: number;
 };
 
-const create521Colors = (primary: string, secondary = "") => {
-  return [
-    primary,
-    primary,
-    primary,
-    primary,
-    primary,
-    secondary,
-    secondary,
-    primary,
-  ];
-};
-
-const create125Colors = (primary: string, secondary = "") => {
-  return create521Colors(primary, secondary).reverse();
-};
-
 const defaultColor = `#B3BDC7`;
-const ethereumColor = "#627eea";
-const ethereumColorArray = create521Colors(ethereumColor, "");
-
-const fantomColor = "#1969ff";
-const fantomColors = create125Colors(fantomColor, "");
-const binanceColor = "#F3BA2F";
-const arbitrumColors = ["#28a0f0", "#2d374b"];
-const avalancheColor = "#e84142";
-const avalancheColors = create521Colors(avalancheColor);
-const solanaColors = [
-  "#ca32f8",
-  "#ca32f8",
-  "#ca32f8",
-  "#c439f6",
-  "#af4eec",
-  "#9469e1",
-  "#7788d5",
-  "#58a6c8",
-  "#1de2af",
-  "#1de2af",
-  "#1de2af",
-  "#2bd3b5",
-  "#44bbbf",
-  "#5ea0cb",
-  "#7c81d7",
-  "#9a63e3",
-];
-const polkaColorPrimary = "#313131";
-const polkaColorSecondary = "#e6007a";
-const polkaColors = create521Colors(polkaColorPrimary, polkaColorSecondary);
-
-const chainMappings: Record<ChainType, string[]> = {
-  Avalanche: avalancheColors,
-  Arbitrum: arbitrumColors,
-  Ethereum: ethereumColorArray,
-  Solana: solanaColors,
-  Fantom: fantomColors,
-  None: [defaultColor],
-  BinanceSmartChain: [binanceColor],
-  PolkaDot: polkaColors,
-};
 
 const pathStyles = ({ chain = "None" }: DynamicTokenIconProps) => {
-  const mapping = chainMappings[chain]
-    ? chainMappings[chain]
-    : chainMappings["None"];
+  const mapping =
+    chain !== "None" ? chainColors[chain].colorArray : [defaultColor];
+
   const colorArray = Array.from({ length: 16 }, (_, index) => {
     if (mapping.length === 1) {
       return mapping[0];

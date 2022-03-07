@@ -7,7 +7,7 @@ import { ReactComponent as RenBusd } from "../assets/tokens/wrapped/renBUSD.svg"
 import { ReactComponent as RenComp } from "../assets/tokens/wrapped/renCOMP.svg";
 import { ReactComponent as RenCrv } from "../assets/tokens/wrapped/renCRV.svg";
 import { ReactComponent as RenDai } from "../assets/tokens/wrapped/renDAI.svg";
-import { ReactComponent as RenDigi } from "../assets/tokens/wrapped/renDIGI.svg";
+import { ReactComponent as RenDgb } from "../assets/tokens/wrapped/renDGB.svg";
 import { ReactComponent as RenDoge } from "../assets/tokens/wrapped/renDOGE.svg";
 import { ReactComponent as RenEth } from "../assets/tokens/wrapped/renETH.svg";
 import { ReactComponent as RenEurt } from "../assets/tokens/wrapped/renEURT.svg";
@@ -40,7 +40,7 @@ export {
   RenComp,
   RenCrv,
   RenDai,
-  RenDigi,
+  RenDgb,
   RenDoge,
   RenEth,
   RenEurt,

@@ -1,12 +1,10 @@
-import { Asset, Chain } from "@renproject/chains";
+import { Asset } from "@renproject/chains";
 
 export type BaseColor = {
   primary: string;
 };
 
 export type AssetColor = BaseColor;
-
-export type ChainColor = BaseColor;
 
 const defaultColor = "#272C33";
 
@@ -48,22 +46,4 @@ export const assetColors: Record<Asset, AssetColor> = {
   USDT: createColor("#26A17B"),
   ZEC: createColor("#F3B63B"),
   gETH: createColor("#627EEA"),
-};
-
-export const chainColors: Record<Chain, ChainColor | undefined> = {
-  Arbitrum: undefined,
-  Avalanche: undefined,
-  BinanceSmartChain: undefined,
-  Bitcoin: undefined,
-  BitcoinCash: undefined,
-  DigiByte: undefined,
-  Dogecoin: undefined,
-  Ethereum: undefined,
-  Fantom: undefined,
-  Filecoin: undefined,
-  Goerli: undefined,
-  Polygon: undefined,
-  Solana: undefined,
-  Terra: undefined,
-  Zcash: undefined,
 };

@@ -7,7 +7,7 @@ import { ReactComponent as Busd } from "../assets/tokens/native/BUSD.svg";
 import { ReactComponent as Comp } from "../assets/tokens/native/COMP.svg";
 import { ReactComponent as Crv } from "../assets/tokens/native/CRV.svg";
 import { ReactComponent as Dai } from "../assets/tokens/native/DAI.svg";
-import { ReactComponent as Digi } from "../assets/tokens/native/DIGI.svg";
+import { ReactComponent as Dgb } from "../assets/tokens/native/DGB.svg";
 import { ReactComponent as Doge } from "../assets/tokens/native/DOGE.svg";
 import { ReactComponent as Eth } from "../assets/tokens/native/ETH.svg";
 import { ReactComponent as Eurt } from "../assets/tokens/native/EURT.svg";
@@ -40,7 +40,7 @@ export {
   Comp,
   Crv,
   Dai,
-  Digi,
+  Dgb,
   Doge,
   Eth,
   Eurt,
