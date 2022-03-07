@@ -15,7 +15,7 @@ const createColor = (primary = defaultColor) => {
   return color;
 };
 
-export const assetColors: Record<Asset, AssetColor> = {
+export const assetsColors: Record<Asset, AssetColor> = {
   AVAX: createColor("#E84142"),
   ArbETH: createColor("#627EEA"),
   BADGER: createColor("#F1A23F"),

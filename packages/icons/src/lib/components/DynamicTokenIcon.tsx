@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Chain } from "@renproject/chains";
 import { FunctionComponent, SVGProps } from "react";
-import { chainColors } from "./chainColors";
+import { chainsColors } from "./chainsColors";
 
 type PickKey<T, K extends keyof T> = Extract<keyof T, K>;
 
@@ -29,7 +29,7 @@ const defaultColor = `#B3BDC7`;
 
 const pathStyles = ({ chain = "None" }: DynamicTokenIconProps) => {
   const mapping =
-    chain !== "None" ? chainColors[chain].colorArray : [defaultColor];
+    chain !== "None" ? chainsColors[chain].colorArray : [defaultColor];
 
   const colorArray = Array.from({ length: 16 }, (_, index) => {
     if (mapping.length === 1) {

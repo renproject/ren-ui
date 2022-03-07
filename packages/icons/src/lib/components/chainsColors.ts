@@ -1,5 +1,5 @@
 import { Asset, Chain } from "@renproject/chains";
-import { assetColors, BaseColor } from "./colors";
+import { assetsColors, BaseColor } from "./assetsColors";
 
 export type ChainColorArray = Array<string>;
 
@@ -51,13 +51,13 @@ const createChainColors = (primary: string, colorArray?: ChainColorArray) => {
 };
 
 const createChainColorsFromAsset = (asset: Asset | string) => {
-  const { primary } = assetColors[asset as Asset];
+  const { primary } = assetsColors[asset as Asset];
   return createChainColors(primary, [primary]);
 };
 
 // using "BTC" instead of Asset.BTC prevents importing chains to build
 // while keeping proper typecheck
-export const chainColors: Record<Chain, ChainColor> = {
+export const chainsColors: Record<Chain, ChainColor> = {
   Arbitrum: createChainColors("#2D374B", ["#28a0f0", "#2D374B"]),
   Avalanche: createChainColors("#E84142", create521Colors("#E84142")),
   BinanceSmartChain: createChainColors("#272C33", create521Colors("#F3BA2F")),
