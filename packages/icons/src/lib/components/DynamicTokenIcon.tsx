@@ -66,6 +66,7 @@ const pathStyles = ({ chain = "None" }: DynamicTokenIconProps) => {
 const sizeStyles = ({ size }: DynamicTokenIconProps) => {
   return css`
     width: ${size}px;
+    height: ${size}px;
   `;
 };
 
@@ -189,8 +190,8 @@ export const DynamicTokenIcon: FunctionComponent<DynamicTokenIconProps> = ({
   return (
     <Wrapper chain={chain} size={size}>
       <svg
-        width="256"
-        height="256"
+        width={size}
+        height={size}
         viewBox="0 0 256 256"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
