@@ -2,49 +2,49 @@ $fontsDir: '.' !default;
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Thin.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Thin-WebS.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Light.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Light-WebS.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Book.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Book-WebS.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Regular.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Regular-WebS.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Bold.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Bold-WebS.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Black.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Black-WebS.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SuisseIntlMono';
-  src: url('#{$fontsDir}/SuisseIntl/SuisseIntl-Mono.otf') format('opentype');
+  src: url('#{$fontsDir}/SuisseIntl/SuisseIntlMono-Regular-WebS.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

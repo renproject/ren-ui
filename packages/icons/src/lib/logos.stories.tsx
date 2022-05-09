@@ -8,7 +8,7 @@ const argTypes = {
 };
 
 export default {
-  title: "Logos",
+  title: "Logos/Ren Logos",
   argTypes: argTypes,
 } as Meta;
 

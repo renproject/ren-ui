@@ -2,13 +2,14 @@
 
 nx run-many --target build-storybook --all &&
 nx run-many --target copy-assets --all &&
-#remove optional packages artifact
+# remove optional packages artifact
 rm -r dist/packages | true &&
-#build indexers
+# build indexers
 mkdir -p dist/assets &&
 touch dist/assets/index.html &&
 cd dist/assets &&
-dirlist-static --filter "\.(?!otf$)" > index.html &&
+# filter out fonts
+dirlist-static --filter "\.(?!woff2)" > index.html &&
 # build main index.html
 cd ../
 touch index.html

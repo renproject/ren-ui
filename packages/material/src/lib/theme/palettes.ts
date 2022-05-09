@@ -1,5 +1,7 @@
 import createPalette from "@mui/material/styles/createPalette";
 import {
+  dividerDark,
+  dividerLight,
   primaryDark,
   primaryLight,
   secondaryDark,
@@ -22,6 +24,7 @@ export const lightPalette = createPalette({
     primary: textPrimaryLight,
     secondary: textSecondaryLight,
   },
+  divider: dividerLight,
 });
 
 export const darkPalette = createPalette({
@@ -36,4 +39,5 @@ export const darkPalette = createPalette({
     primary: textPrimaryDark,
     secondary: textSecondaryDark,
   },
+  divider: dividerDark,
 });

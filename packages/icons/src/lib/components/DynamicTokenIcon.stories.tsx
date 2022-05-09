@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Meta, Story } from "@storybook/react";
-import { Busd, Dai, Eurt, Usdc, Usdt } from "../icons";
+import { Busd, Dai, Eurt, Usdc, Usdt } from "../tokens/native";
 import { DynamicTokenIcon, DynamicTokenIconProps } from "./DynamicTokenIcon";
 
 export default {

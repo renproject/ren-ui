@@ -1,5 +1,5 @@
 import { CssBaseline } from "@mui/material";
-import { forceReRender } from "@storybook/react";
+import "../../fonts/src/index.scss";
 
 import { ThemeProvider as Emotion10ThemeProvider } from "emotion-theming";
 

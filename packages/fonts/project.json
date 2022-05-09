@@ -15,7 +15,8 @@
         "external": ["react/jsx-runtime", "@emotion/styled/base"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "assets": [
-          "packages/fonts/src/lib",
+          "packages/fonts/src/lib/assets/SuisseIntl",
+          "packages/fonts/src/lib/_suisse.scss",
           "packages/fonts/src/index.scss",
           {
             "glob": "packages/fonts/README.md",
