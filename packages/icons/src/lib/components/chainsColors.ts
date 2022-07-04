@@ -60,7 +60,7 @@ const createChainColorsFromAsset = (asset: Asset | string) => {
 export const chainsColors: Record<Chain, ChainColor> = {
   Arbitrum: createChainColors("#2D374B", ["#28a0f0", "#2D374B"]),
   Avalanche: createChainColors("#E84142", create521Colors("#E84142")),
-  BinanceSmartChain: createChainColors("#272C33", create521Colors("#F3BA2F")),
+  BinanceSmartChain: createChainColors("#F3BA2F", create521Colors("#F3BA2F")),
   Bitcoin: createChainColorsFromAsset("BTC"),
   BitcoinCash: createChainColorsFromAsset("BCH"),
   DigiByte: createChainColorsFromAsset("DGB"),
