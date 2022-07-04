@@ -5,8 +5,10 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@babel/helper-environment-visitor": "^7.18.6",
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
+    "@jridgewell/gen-mapping": "^0.3.2",
     "@mui/material": "^5.2.0",
     "@renproject/chains": "3.3.0",
     "@renproject/icons": "^0.0.1-alpha.0",
