@@ -14,6 +14,8 @@ import { ReactComponent as RenEurt } from "../assets/tokens/wrapped/renEURT.svg"
 import { ReactComponent as RenFil } from "../assets/tokens/wrapped/renFIL.svg";
 import { ReactComponent as RenFtm } from "../assets/tokens/wrapped/renFTM.svg";
 import { ReactComponent as RenFtt } from "../assets/tokens/wrapped/renFTT.svg";
+import { ReactComponent as RenGlmr } from "../assets/tokens/wrapped/renGLMR.svg";
+import { ReactComponent as RenKava } from "../assets/tokens/wrapped/renKAVA.svg";
 import { ReactComponent as RenKnc } from "../assets/tokens/wrapped/renKNC.svg";
 import { ReactComponent as RenLink } from "../assets/tokens/wrapped/renLINK.svg";
 import { ReactComponent as RenLuna } from "../assets/tokens/wrapped/renLUNA.svg";
@@ -47,6 +49,8 @@ export {
   RenFil,
   RenFtm,
   RenFtt,
+  RenGlmr,
+  RenKava,
   RenKnc,
   RenLink,
   RenLuna,

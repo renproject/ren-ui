@@ -14,6 +14,8 @@ import { ReactComponent as Eurt } from "../assets/tokens/native/EURT.svg";
 import { ReactComponent as Fil } from "../assets/tokens/native/FIL.svg";
 import { ReactComponent as Ftm } from "../assets/tokens/native/FTM.svg";
 import { ReactComponent as Ftt } from "../assets/tokens/native/FTT.svg";
+import { ReactComponent as Glmr } from "../assets/tokens/native/GLMR.svg";
+import { ReactComponent as Kava } from "../assets/tokens/native/KAVA.svg";
 import { ReactComponent as Knc } from "../assets/tokens/native/KNC.svg";
 import { ReactComponent as Link } from "../assets/tokens/native/LINK.svg";
 import { ReactComponent as Luna } from "../assets/tokens/native/LUNA.svg";
@@ -47,6 +49,8 @@ export {
   Fil,
   Ftm,
   Ftt,
+  Glmr,
+  Kava,
   Knc,
   Link,
   Luna,
